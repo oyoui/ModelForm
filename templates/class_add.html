@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <form action="" method="post" novalidate>
+    <div class="form-group">
+        {% csrf_token %}
+        {{ form.name.field.label }}
+        {{ form.name }}
+        {{ form.name.errors.0 }}
+
+    </div>
+    <input type="submit"  value="提交" />
+</form>
+</div>
+
+</body>
+</html>
